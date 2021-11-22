@@ -3,36 +3,59 @@
 /**
  * Module dependencies.
  */
+ var http = require('http');
 
-var app = require('../app');
-var debug = require('debug')('myapp:server');
-var http = require('http');
+require('dotevn').config();
+const {sequelize} = require('./models')
+
+
+sequelize.authenticate()
+  .then(() => {
+  console.log('Connection has been established successfully.');
+  var app = require('../app');
+  var debug = require('debug')('myapp:server');
+  /**
+   * Get port from environment and store in Express.
+   */
+
+  var port = normalizePort(process.env.PORT || '3000');
+  app.set('port', port);
+
+  /**
+   * Create HTTP server.
+   */
+
+  var server = http.createServer(app);
+
+  /**
+   * Listen on provided port, on all network interfaces.
+   */
+
+  server.listen(port);
+  server.on('error', onError);
+  server.on('listening', onListening);
+
+  
+  /**
+   * Event listener for HTTP server "listening" event.
+   */
+
+  function onListening() {
+    var addr = server.address();
+    var bind = typeof addr === 'string'
+      ? 'pipe ' + addr
+      : 'port ' + addr.port;
+    debug('Listening on ' + bind);
+  }
+
+  })
+  .catch (error => {
+  console.error('Unable to connect to the database:', error);
+  });
 
 /**
- * Get port from environment and store in Express.
- */
-
-var port = normalizePort(process.env.PORT || '3000');
-app.set('port', port);
-
-/**
- * Create HTTP server.
- */
-
-var server = http.createServer(app);
-
-/**
- * Listen on provided port, on all network interfaces.
- */
-
-server.listen(port);
-server.on('error', onError);
-server.on('listening', onListening);
-
-/**
- * Normalize a port into a number, string, or false.
- */
-
+   * Normalize a port into a number, string, or false.
+   */
 function normalizePort(val) {
   var port = parseInt(val, 10);
 
@@ -77,14 +100,3 @@ function onError(error) {
   }
 }
 
-/**
- * Event listener for HTTP server "listening" event.
- */
-
-function onListening() {
-  var addr = server.address();
-  var bind = typeof addr === 'string'
-    ? 'pipe ' + addr
-    : 'port ' + addr.port;
-  debug('Listening on ' + bind);
-}
