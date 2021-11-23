@@ -26,16 +26,15 @@
                     <div class="htc__grid__top">
                         <div class="htc__select__option">
                             <select class="ht__select">
-                                <option>Default softing</option>
+                                <option>Default sorting</option>
                                 <option>Sort by popularity</option>
                                 <option>Sort by average rating</option>
                                 <option>Sort by newness</option>
                             </select>
                             <select class="ht__select">
-                                <option>Show by</option>
-                                <option>Sort by popularity</option>
-                                <option>Sort by average rating</option>
-                                <option>Sort by newness</option>
+                                <option>Lọc sách theo thể loại</option>
+                                <option>Tiểu thuyết</option>
+                                <option>Self-helf</option>                               
                             </select>
                         </div>
                         <div class="ht__pro__qun">
@@ -58,15 +57,13 @@
                                         <div class="category">
                                             <div class="ht__cat__thumb">
                                                 <a href="product/Detail">
-                                                    <img src="images/product/1.jpg" alt="product images">
+                                                    <img src="{{URL}}" alt="product images">
                                                 </a>
                                             </div>
                                             <div class="fr__hover__info">
                                                 <ul class="product__action">
                                                     <li><a href="wishlist"><i class="icon-heart icons"></i></a></li>
-
                                                     <li><a href="cart"><i class="icon-handbag icons"></i></a></li>
-
                                                     <li><a href="#"><i class="icon-shuffle icons"></i></a></li>
                                                 </ul>
                                             </div>
@@ -188,8 +185,7 @@
                                     </div>
                                 </div>
                             </div>                          
-                        </div>
-                       
+                        </div>                    
                     </div>
                     <!-- End Product View -->
                 </div>
@@ -198,9 +194,9 @@
                     <div class="col-xs-12">
                         <ul class="htc__pagenation">
                             <li><a href="#"><i class="zmdi zmdi-chevron-left"></i></a></li> 
-                            <li><a href="#">1</a></li> 
-                            <li class="active"><a href="#">3</a></li>   
-                            <li><a href="#">19</a></li> 
+                            <li class="active"><a href="#">1</a></li> 
+                            <li><a href="/product?page=2">2</a></li>   
+                            <li><a href="/product?page=3">3</a></li> 
                             <li><a href="#"><i class="zmdi zmdi-chevron-right"></i></a></li> 
                         </ul>
                     </div>
@@ -230,85 +226,14 @@
                             </div>
                         </div>
                     </div>
-                    <!-- End Prize Range -->
-                    <!-- Start Category Area -->
-                    <div class="htc__category">
-                        <h4 class="title__line--4">categories</h4>
-                        <ul class="ht__cat__list">
-                            <li><a href="#">Clothing</a></li>
-                            <li><a href="#">Bags</a></li>
-                            <li><a href="#">Shoes</a></li>
-                            <li><a href="#">Jewelry</a></li>
-                            <li><a href="#">Accessories</a></li>
-                            <li><a href="#">Food / Drink Store</a></li>
-                            <li><a href="#">Gift Store</a></li>
-                            <li><a href="#">Accessories</a></li>
-                            <li><a href="#">Watch</a></li>
-                            <li><a href="#">Other</a></li>
-                        </ul>
-                    </div>
-                    <!-- End Category Area -->
+                    <!-- End Prize Range -->                
                     
-                    <!-- Start Pro Color -->
-                    <div class="ht__pro__color">
-                        <h4 class="title__line--4">color</h4>
-                        <ul class="ht__color__list">
-                            <li class="grey"><a href="#">grey</a></li>
-                            <li class="lamon"><a href="#">lamon</a></li>
-                            <li class="white"><a href="#">white</a></li>
-                            <li class="red"><a href="#">red</a></li>
-                            <li class="black"><a href="#">black</a></li>
-                            <li class="pink"><a href="#">pink</a></li>
-                        </ul>
-                    </div>
-                    <!-- End Pro Color -->
-                    <!-- Start Pro Size -->
-                    <div class="ht__pro__size">
-                        <h4 class="title__line--4">Size</h4>
-                        <ul class="ht__size__list">
-                            <li><a href="#">xs</a></li>
-                            <li><a href="#">s</a></li>
-                            <li><a href="#">m</a></li>
-                            <li><a href="#">reld</a></li>
-                            <li><a href="#">xl</a></li>
-                        </ul>
-                    </div>
-                    <!-- End Pro Size -->
-                    <!-- Start Tag Area -->
-                    <div class="htc__tag">
-                        <h4 class="title__line--4">tags</h4>
-                        <ul class="ht__tag__list">
-                            <li><a href="#">Clothing</a></li>
-                            <li><a href="#">bag</a></li>
-                            <li><a href="#">Shoes</a></li>
-                            <li><a href="#">Jewelry</a></li>
-                            <li><a href="#">Food</a></li>
-                            <li><a href="#">Aceessories</a></li>
-                            <li><a href="#">Store</a></li>
-                            <li><a href="#">Watch</a></li>
-                            <li><a href="#">Other</a></li>
-                        </ul>
-                    </div>
-                    <!-- End Tag Area -->
-                    <!-- Start Compare Area -->
-                    <div class="htc__compare__area">
-                        <h4 class="title__line--4">compare</h4>
-                        <ul class="htc__compare__list">
-                            <li><a href="#">White men’s polo<i class="icon-trash icons"></i></a></li>
-                            <li><a href="#">T-shirt for style girl...<i class="icon-trash icons"></i></a></li>
-                            <li><a href="#">Basic dress for women...<i class="icon-trash icons"></i></a></li>
-                        </ul>
-                        <ul class="ht__com__btn">
-                            <li><a href="#">clear all</a></li>
-                            <li class="compare"><a href="#">Compare</a></li>
-                        </ul>
-                    </div>
-                    <!-- End Compare Area -->
                     <!-- Start Best Sell Area -->
                     <div class="htc__recent__product">
                         <h2 class="title__line--4">best seller</h2>
                         <div class="htc__recent__product__inner">
                             <!-- Start Single Product -->
+                            
                             <div class="htc__best__product">
                                 <div class="htc__best__pro__thumb">
                                     <a href="product/Detail">

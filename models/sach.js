@@ -17,6 +17,10 @@ module.exports = function(sequelize, DataTypes) {
     GIA: {
       type: DataTypes.INTEGER,
       allowNull: true
+    },
+    URL: {
+      type: DataTypes.STRING(45),
+      allowNull: true
     }
   }, {
     sequelize,
