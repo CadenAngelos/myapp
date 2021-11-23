@@ -9,7 +9,7 @@ const helmet = require('helmet');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 
-const productRouter = require('./routes/product');
+const productRouter = require('./components/products');
 
 const app = express();
 
